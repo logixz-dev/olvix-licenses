@@ -1,0 +1,8 @@
+# NEVER commit the license private key to this PUBLIC repo. The signing
+# script reads it by path from offline custody; these patterns are a
+# belt-and-suspenders guard against an accidental `git add`.
+*.pem
+*.key
+*private*
+*secret*
+license-private*

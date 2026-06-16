@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Olvix license services</title>
+    <style>
+      body { font: 15px/1.6 system-ui, sans-serif; max-width: 42rem; margin: 4rem auto; padding: 0 1rem; color: #1c1917; }
+      code { background: #f5f5f4; padding: 0.1em 0.35em; border-radius: 4px; }
+      a { color: #b45309; }
+    </style>
+  </head>
+  <body>
+    <h1>Olvix license services</h1>
+    <p>
+      This host publishes the signed Olvix enterprise-license revocation
+      list. The only artifact that matters here is the signed document at
+      <a href="revocations.jwt"><code>/revocations.jwt</code></a>.
+    </p>
+    <p>
+      It is an Ed25519-signed JWT — integrity comes from the signature, not
+      from this host. Self-hosted Olvix installs verify it against the
+      embedded license public key; a missing or unverifiable file fails
+      open (nothing revoked). Community installs never fetch it.
+    </p>
+    <p>
+      Operated by <a href="https://industrioushive.com">Industrious Hive</a>.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+# Olvix license — revoked token hashes
+#
+# One SHA-256 hex digest per line. Each is the hash of a revoked
+# enterprise license token's VERBATIM string. Comments (#) and blank
+# lines are ignored. Source of truth for the signed revocation list;
+# verbatim tokens never live here.
+#
+# To revoke a token:
+#   1. hash it:   printf '%s' '<the token>' | shasum -a 256 | awk '{print $1}'
+#   2. append the hash below (with a # comment noting the customer/date)
+#   3. sign:      node bin/sign-revocations.mjs --key /secure/license-private.pem
+#   4. commit + push — GitHub Pages serves the updated revocations.jwt
+#
+# Never remove a line unless you are deliberately un-revoking.
